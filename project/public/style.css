@@ -1,0 +1,110 @@
+html {
+  background: black;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#defaultCanvas0 {
+  position: absolute;
+  top: 0;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+#app.stacked .card {
+  position: absolute;
+  left: 0;
+}
+
+/* #app.stacked .card:nth-of-type(2) {
+  left: 5px;
+}
+
+#app.stacked .card:nth-of-type(3) {
+  left: 50px;
+} */
+
+.card {
+  width: 250px;
+  height: 444px;
+  margin: 0px 25px;
+  perspective: 1000px;
+}
+
+.card-inner,
+.card-front {
+  width: 100%;
+}
+
+.card-inner {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  width: 100%;
+  height: 100%;
+  background-color: #9b8338;
+  background-image: url("img/3P.jpg");
+  background-size: contain;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-img {
+  max-width: 100%;
+}
+
+/* Animaciones */
+.card:hover .card-inner {
+  bottom: 50px;
+  cursor: pointer;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+  bottom: 50px;
+  cursor: pointer;
+}
+
+/* Board */
+.board {
+  border: 1px solid red;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.spot {
+  width: 250px;
+  height: 444px;
+  border: 1px solid green;
+}

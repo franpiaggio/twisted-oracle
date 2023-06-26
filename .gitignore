@@ -1,0 +1,6 @@
+lib/fxlens/**
+node_modules
+dist
+dist-zipped
+
+project/public/img

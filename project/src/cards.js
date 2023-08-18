@@ -14,15 +14,21 @@ export function getUniqueObjects(originalArray) {
 }
 
 export function getCardNode(card) {
+  const irRotated = fxrand() > 0.5;
   const template = `
     <div class="card">
         <div class="card-inner flipped">
             <div class="card-front">
-                <img class="card-img" src="img/${card.name}" alt="${card.name}" />
+                <img 
+                  class="card-img ${irRotated ? "rotated" : null}" 
+                  src="img/${card.name}" 
+                  alt="${card.name}" 
+                />
             </div>
             <div class="card-back">
             </div>
         </div>
+        <div class="card-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate deserunt tempora recusandae minus placeat et itaque doloremque? Eius tempora cum dolorem molestiae tempore, dolore, quo minima architecto itaque quasi alias! </div>
     </div>
   `;
   return template;

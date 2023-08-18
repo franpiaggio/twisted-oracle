@@ -3,4 +3,4 @@ node_modules
 dist
 dist-zipped
 
-project/public/img
+# project/public/img

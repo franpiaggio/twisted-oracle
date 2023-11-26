@@ -66,7 +66,6 @@ function showSingleCard() {
     duration: 0.5,
     stagger: -0.3,
     ease: "power1.easeOut",
-    // onComplete: toggleFlipCards,
   });
   transition.play();
 }
@@ -93,7 +92,7 @@ cardNodes.forEach((card) => {
 });
 
 // REVEAL AND SHUFFLE
-let counter = 3;
+let counter = 0;
 const duration = 800;
 const shuffleAnimation = setInterval(() => {
   if (counter === 3) {
